@@ -31,15 +31,15 @@ exports.signin = (req, res) => {
 
             const passwordMatch = await bcrypt.compare(req.body.password, response[0].password)
 
-            if(passwordMatch && response[0].active === 1 ){
-                const token = jwt.sign({"id":response[0].user_Id, "role":response[0].role}, secret_key, { expiresIn: '24h' });
+            if(passwordMatch && response[0].is_active === 1 ){
+                const token = jwt.sign({"id":response[0].id, "role":response[0].user_type}, secret_key, { expiresIn: '24h' });
                 return res.status(200).json({
                     jwtToken:token,
                     message: 'successfully signin'
                 })
             }
             else{
-                return res.status(401).json({error: 'Password not match or not active'})
+                return res.status(401).json({error: 'Invalid credentials.'})
             }
 
         })

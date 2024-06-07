@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 const User = function(user) {
     this.user_name = user.user_name;
-    // this.user_type = user.user_type || 'USER';
+    this.user_type = user.user_type || 'USER';
     this.email = user.email;
     this.password = user.password;
   };

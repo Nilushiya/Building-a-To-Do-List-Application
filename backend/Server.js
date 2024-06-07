@@ -12,16 +12,11 @@ Server.use(express.json())
 Server.use(bodyParser.json())
 
 const userRouter = require('./Src/Routers/UserRouter')
+const taskRouter = require('./Src/Routers/TaskRouter')
 
-// db.getConnection((err, connection) => {
-//     if (err) {
-//         console.error('Error connecting to the database:', err.stack);
-//     } else {
-//         console.log('Connected to the database as id ' + connection.threadId);
-//         connection.release();
-//     }
-// });
+
 Server.use('/api/user', userRouter)
+Server.use('api/task',taskRouter)
 
 
 module.exports = Server
