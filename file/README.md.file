@@ -1,0 +1,27 @@
+# Task Manager Application
+
+This is a simple Task Manager application that allows users to add, update, delete tasks and change their status.
+
+## How to Run Locally
+
+Follow these steps to run the application on your local machine:
+
+### 1. Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/Nilushiya/Building-a-To-Do-List-Application
+
+
+### 2. Navigate to the Project Directory
+
+### 3. Install Dependencies
+        npm install
+
+### 4. Start the Development Server
+        npm Start
+
+### 5. Access the Application
+        Once the development server is running, you can access the application in your web browser at http://localhost:4000.
+            eg: http://localhost:4000/api/task/updateStatus/7
