@@ -1,10 +1,10 @@
+// middleware/auth.js
 const jwt = require('jsonwebtoken');
 
-const secret_key = 'sdfghgfdasdfghjhtrewqwertyuytrewqaxcvbhuytrewsxcvhytrewasxcvghytrewsxcvbhytrewsxcvghytrewazxcvgtrewazxcvghytrewasxcg'
-
+const secret_key = 'sdfghgfdasdfghjhtrewqwertyuytrewqaxcvbhuytrewsxcvhytrewasxcvghytrewsxcvbhytrewsxcvghytrewazxcvgtrewazxcvghytrewasxcg';
 
 function verifyToken(req, res, next) {
-  console.log('fhfnf :',req.headers['authorization'])
+  console.log('Authorization Header:', req.headers['authorization']);
 
   const token = req.headers['authorization'];
   if (!token) {
@@ -13,8 +13,7 @@ function verifyToken(req, res, next) {
   try {
     const decoded = jwt.verify(token.replace('Bearer ', ''), secret_key);
     req.user = decoded;
-  } 
-  catch (err) {
+  } catch (err) {
     return res.status(401).send('Invalid Token');
   }
   return next();

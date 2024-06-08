@@ -16,7 +16,7 @@ const taskRouter = require('./Src/Routers/TaskRouter')
 
 
 Server.use('/api/user', userRouter)
-Server.use('api/task',taskRouter)
+Server.use('/api/task',taskRouter)
 
 
 module.exports = Server
