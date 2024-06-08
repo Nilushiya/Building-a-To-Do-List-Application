@@ -19,6 +19,7 @@ exports.signup = (req, res) => {
 }
 
 exports.signin = (req, res) => {
+    console.log("body",req.body)
     user.user_signin(req.body)
         .then(async response => {
             if(response.length === 0){
@@ -32,7 +33,9 @@ exports.signin = (req, res) => {
             const passwordMatch = await bcrypt.compare(req.body.password, response[0].password)
 
             if(passwordMatch && response[0].is_active === 1 ){
+                console.log("this pkay")
                 const token = jwt.sign({"id":response[0].id, "role":response[0].user_type}, secret_key, { expiresIn: '24h' });
+                console.log("token:",token)
                 return res.status(200).json({
                     jwtToken:token,
                     message: 'successfully signin'
