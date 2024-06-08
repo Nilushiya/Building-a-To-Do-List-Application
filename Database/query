@@ -1,0 +1,24 @@
+CREATE DATABASE todo_db;
+USE todo_db;
+CREATE TABLE User (
+    id int auto_increment not null,
+    user_name varchar(30) not null,
+    user_type enum('USER','ADMIN') not null default 'USER',
+    is_active boolean not null default true,
+    email varchar(30) UNIQUE not null,
+    password varchar(255) not null,
+    created_at timestamp default current_timestamp,
+    primary key (id)
+);
+  select * from User;
+  
+  create table Task(
+  task_id int auto_increment not null,
+  user_id int not null,
+  title varchar(50) not null,
+  description text not null,
+  status enum('not_completed','completed') not null default 'not_completed',
+  primary key(task_id),
+  foreign key(user_id) references User(id) ON DELETE CASCADE
+  );
+  select * from Task;

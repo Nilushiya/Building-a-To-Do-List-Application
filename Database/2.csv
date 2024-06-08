@@ -1,0 +1,9 @@
+task_id,user_id,title,description,status
+1,1,"Morning Exercise","Start your day with a quick workout session to boost energy levels and improve overall health. Include activities like stretching, cardio, and strength training.",not_completed
+2,1,"Healthy Breakfast","Description: Prepare and enjoy a nutritious breakfast to fuel your body and mind for the day ahead. Opt for foods rich in protein, fiber, and vitamins, such as eggs, whole grains, fruits, and yogurt.",not_completed
+3,1,"Work Planning","Review your tasks and priorities for the day. Make a to-do list or schedule to organize your work efficiently and stay focused on important tasks.",not_completed
+4,1,"Healthy Snack Break","Take a short break to refuel with a healthy snack. Choose options like nuts, fruits, veggies, or yogurt to satisfy hunger and keep energy levels steady.",not_completed
+5,2,"Mindful Break","Take a moment to pause, breathe deeply, and practice mindfulness. Whether it's a short meditation session, deep breathing exercises, or a quick walk outdoors, prioritize mental well-being.",not_completed
+6,2,"Task Review","Reflect on your progress and accomplishments for the day. Review completed tasks, adjust priorities if needed, and plan for tomorrow's tasks to finish the day on a productive note.",not_completed
+9,3,Gratitude,"Before bed.",completed
+10,3,"Take 30min break","This help balance our body.",not_completed
